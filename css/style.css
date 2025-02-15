@@ -1,0 +1,162 @@
+/* Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body,
+  html {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* ------------------------------
+     Navigation Bar (Used on First & Second Pages)
+     ------------------------------ */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0B2B3A;
+  }
+  
+  .navbar .logo {
+    border: 2px solid #fff;
+    padding: 5px 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: opacity 0.2s;
+  }
+  
+  .nav-links a:hover {
+    opacity: 0.8;
+  }
+  
+  /* ------------------------------
+     GIF Page Styles (gif.html)
+     ------------------------------ */
+  .gif-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #1B1B3A;
+  }
+  
+  .gif-screen img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* ------------------------------
+     First Page Styles (first.html)
+     ------------------------------ */
+  .first-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Subtract navbar height (approx. 60px) so content isn’t hidden */
+    height: calc(100vh - 60px);
+    background-color: #1B1B3A;
+    position: relative;
+  }
+  
+  .first-screen .question {
+    font-size: 100px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .first-screen button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #000;
+    background-color: #eee;
+    transition: background-color 0.2s;
+  }
+  
+  .first-screen button:hover {
+    background-color: #ccc;
+  }
+  
+  /* Optional: Logo displayed within content (used in both first and second pages) */
+  .connect-logo {
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    width: 80px;
+    height: auto;
+  }
+  
+  /* ------------------------------
+     Second Page Styles (second.html)
+     ------------------------------ */
+  .second-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Subtract navbar height (approx. 60px) so content isn’t hidden */
+    height: calc(100vh - 60px);
+    background-color: #1B1B3A;
+    position: relative;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .form-container input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+  }
+  
+  .form-container button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.2s;
+  }
+  
+  .form-container button:hover {
+    background-color: #0056b3;
+  }
+  

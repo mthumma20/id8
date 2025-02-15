@@ -1,157 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>ID8</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body, html {
-      width: 100%;
-      height: 100%;
-      font-family: Arial, sans-serif;
-    }
-
-    /* ========== First Screen Styles ========== */
-    .first-screen {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background-color: #fff;
-    }
-
-    .first-screen .logo {
-      display: inline-block;
-      border: 2px solid #000;
-      padding: 5px 15px;
-      margin-bottom: 20px;
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .first-screen .question {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-
-    .first-screen .button-container {
-      display: flex;
-      flex-direction: column; /* Stacks the buttons vertically */
-      gap: 10px;
-    }
-
-    .first-screen button {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      border: 2px solid #000;
-      background-color: #eee;
-      transition: background-color 0.2s;
-    }
-
-    .first-screen button:hover {
-      background-color: #ccc;
-    }
-
-    /* ========== Second Screen Styles ========== */
-    .second-screen {
-      display: none; /* Hidden by default */
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background-color: #1B1B3A; /* A dark background */
-      position: relative; /* Allows us to position the logo absolutely */
-    }
-
-    /* The ID8 "logo" in the top-left corner */
-    .second-screen .logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      background-color: #fff;
-      color: #000;
-      padding: 5px 15px;
-      border: 2px solid #000;
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    /* Container for the form elements */
-    .form-container {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      width: 300px;
-      text-align: center;
-    }
-
-    .form-container input {
-      padding: 10px;
-      font-size: 16px;
-      border: none;
-      outline: none;
-      border-radius: 4px;
-    }
-
-    /* Blue button style */
-    .form-container button {
-      padding: 10px;
-      font-size: 16px;
-      border: none;
-      outline: none;
-      border-radius: 4px;
-      cursor: pointer;
-      background-color: #007bff;
-      color: #fff;
-      transition: background-color 0.2s;
-    }
-
-    .form-container button:hover {
-      background-color: #0056b3;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>GIF Page</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-  <!-- ========== First Screen ========== -->
-  <div class="first-screen">
-    <div class="logo">ID8</div>
-    <div class="question">Are you a...</div>
-    <div class="button-container">
-      <button class="role-button" onclick="selectRole('entrepreneur')">Entrepreneur</button>
-      <button class="role-button" onclick="selectRole('investor')">Investor</button>
-    </div>
+  <div class="gif-screen" id="gifScreen">
+    <!-- Update the src to the correct path of your GIF file -->
+    <img id="introGif" src="gif/Connect.gif" alt="Connect Animation">
   </div>
-
-  <!-- ========== Second Screen ========== -->
-  <div class="second-screen" id="secondScreen">
-    <div class="logo">ID8</div>
-    <div class="form-container">
-      <input type="text" placeholder="Username" />
-      <input type="text" placeholder="Password" />
-      <button onclick="createAccount()">Create an Account</button>
-    </div>
-  </div>
-
+  
   <script>
-    // Hides the first screen and shows the second screen when a role is selected
-    function selectRole(role) {
-      // Optionally, you could do something with 'role' here (e.g., store it, send to server, etc.)
-      document.querySelector('.first-screen').style.display = 'none';
-      document.getElementById('secondScreen').style.display = 'flex';
-    }
-
-    // A simple function for the "Create an Account" button
-    function createAccount() {
-      alert("Account created!");
-    }
+    // After 5 seconds, redirect to the first page
+    window.addEventListener('load', function() {
+      setTimeout(function(){
+         window.location.href = "first.html";
+      }, 1000); // Duration in milliseconds
+    });
   </script>
 </body>
 </html>
