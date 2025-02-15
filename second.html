@@ -3,34 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>Second Page</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <!-- Navigation Bar -->
   <nav class="navbar">
-    <a href="#" class="logo">ID8</a>
+    <a href="index.html"><img src="img/Connect.png" alt="Connect" class="logo"></a>
     <div class="nav-links">
-      <a href="#">Discover</a>
-      <a href="#">Connect</a>
-      <a href="#">Profile</a>
+      <a href="business.html">Discover</a>
+      <a href="#">Messaging</a>
+      <a href="account.html">Profile</a>
     </div>
   </nav>
 
   <!-- Second Screen Content -->
   <div class="second-screen">
-    <!-- Optional: Display Connect.png in the content area -->
-    <img src="img/Connect.png" alt="Connect" class="connect-logo" />
     <div class="form-container">
       <input type="text" placeholder="Username">
       <input type="text" placeholder="Password">
-      <button onclick="createAccount()">Create an Account</button>
+      <!-- Direct redirect button -->
+      <button onclick="window.location.href='account.html'">Create an Account</button>
     </div>
   </div>
-  
-  <script>
-    function createAccount() {
-      alert("Account created!");
-    }
-  </script>
 </body>
 </html>
