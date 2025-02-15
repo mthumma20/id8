@@ -36,6 +36,7 @@
 
     .button-container {
       display: flex;
+      flex-direction: column; /* Stacks the buttons vertically */
       gap: 10px;
     }
 
@@ -57,8 +58,17 @@
   <div class="logo">ID8</div>
   <div class="question">Are you a...</div>
   <div class="button-container">
-    <button>Entrepreneur</button>
-    <button>Investor</button>
-  </div>
+    <button class="role-button" onclick="selectRole('entrepreneur')">Entrepreneur</button>
+    <button class="role-button" onclick="selectRole('investor')">Investor</button>
+</div>
+
+<script>
+    function selectRole(role) {
+        alert("You selected: " + role);
+        // Redirect to a different page if needed
+        // window.location.href = role + ".html";
+    }
+</script>
+
 </body>
 </html>
