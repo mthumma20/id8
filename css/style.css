@@ -12,7 +12,6 @@
     font-family: Arial, sans-serif;
   }
   
-  /* Navigation Bar (Not used on GIF page)*/
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -46,7 +45,6 @@
     color: #0B2B3A;
   }
   
-  /* GIF Page Styles (gif.html)*/
   .gif-screen {
     display: flex;
     align-items: center;
@@ -61,13 +59,11 @@
     height: auto;
   }
   
-  /* First Page Styles (first.html)*/
   .first-screen {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* Subtract navbar height (approx. 60px) so content isn’t hidden */
     height: calc(100vh - 60px);
     background-color: #1B1B3A;
     position: relative;
@@ -98,7 +94,6 @@
     background-color: #ccc;
   }
   
-  /* Optional: Logo displayed within content (used in both first and second pages) */
   .connect-logo {
     position: absolute;
     top: 70px;
@@ -107,13 +102,11 @@
     height: auto;
   }
   
-  /* Second Page Styles (second.html)*/
   .second-screen {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* Subtract navbar height (approx. 60px) so content isn’t hidden */
     height: calc(100vh - 60px);
     background-color: #1B1B3A;
     position: relative;
@@ -155,7 +148,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 60px); /* Adjust for navbar height */
+    height: calc(100vh - 60px);
     background-color: #1B1B3A;
   }
   .account-form {
@@ -208,7 +201,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 60px); /* Adjust for navbar height */
+    height: calc(100vh - 60px);
     background-color: #1B1B3A;
     padding: 10px;
   }
@@ -217,4 +210,94 @@
     height: 100%;
     border: none;
     border-radius: 8px;
+  }
+
+  .messaging-container {
+    display: flex;
+    height: calc(100vh - 60px);
+  }
+
+  .contacts-list {
+    width: 300px;
+    background-color: #f0f2f5;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+  }
+  .contacts-list h3 {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    margin: 0;
+    font-size: 18px;
+  }
+  .contact-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  .contact-item:hover {
+    background-color: #e0e0e0;
+  }
+
+  .conversation-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+  }
+  .conversation-header {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: #f7f7f7;
+    font-weight: bold;
+  }
+  .messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+  }
+  .message {
+    margin-bottom: 10px;
+    max-width: 70%;
+    padding: 8px 12px;
+    border-radius: 16px;
+    background-color: #e0e0e0;
+    word-wrap: break-word;
+  }
+  .message.sent {
+    align-self: flex-end;
+    background-color: #007bff;
+    color: #fff;
+  }
+  .message.received {
+    align-self: flex-start;
+    background-color: #e0e0e0;
+    color: #000;
+  }
+  .message-input-container {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    gap: 10px;
+    background-color: #fff;
+  }
+  .message-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+  }
+  .send-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  .send-button:hover {
+    background-color: #0056b3;
   }
