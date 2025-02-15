@@ -12,9 +12,7 @@
     font-family: Arial, sans-serif;
   }
   
-  /* ------------------------------
-     Navigation Bar (Used on First & Second Pages)
-     ------------------------------ */
+  /* Navigation Bar (Not used on GIF page)*/
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -49,9 +47,7 @@
     opacity: 0.8;
   }
   
-  /* ------------------------------
-     GIF Page Styles (gif.html)
-     ------------------------------ */
+  /* GIF Page Styles (gif.html)*/
   .gif-screen {
     display: flex;
     align-items: center;
@@ -66,9 +62,7 @@
     height: auto;
   }
   
-  /* ------------------------------
-     First Page Styles (first.html)
-     ------------------------------ */
+  /* First Page Styles (first.html)*/
   .first-screen {
     display: flex;
     flex-direction: column;
@@ -114,9 +108,7 @@
     height: auto;
   }
   
-  /* ------------------------------
-     Second Page Styles (second.html)
-     ------------------------------ */
+  /* Second Page Styles (second.html)*/
   .second-screen {
     display: flex;
     flex-direction: column;
