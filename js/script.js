@@ -10,7 +10,7 @@ function handleScroll() {
   var scrollPercentage = scrollPosition / (docHeight - viewportHeight);
 
   // Updated gradient transition from #31353D to #000000
-  var bgColor = interpolateColor(scrollPercentage, '#31353D', '#000000');
+  var bgColor = interpolateColor(scrollPercentage, '#1B1B3A', '#000000');
   var introTextColor = interpolateColor(scrollPercentage, '#bdd9cd', '#214457');
   var changingTextColor = interpolateColor(scrollPercentage, 'white', '#051827');
 
