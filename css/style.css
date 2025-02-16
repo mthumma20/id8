@@ -10,6 +10,7 @@
     width: 100%;
     height: 100%;
     font-family: "Lexend";
+    background-color: #1B1B3A;
   }
 
   .font {
@@ -440,3 +441,18 @@ a {
   color: white;
   border-radius: 5px;
 }   
+
+.photo-gallery {
+    display: flex;
+    justify-content: center; /* centers the images horizontally */
+    gap: 20px;             /* space between each image */
+    margin-top: 20px;      /* space above the gallery */
+    padding: 10px;
+  }
+  
+  .photo-gallery img {
+    width: 150px;  /* adjust width as needed */
+    height: auto;
+    border-radius: 4px; /* optional: rounds the corners of the images */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* optional: adds a subtle shadow */
+  }
