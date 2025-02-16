@@ -16,30 +16,75 @@
     </div>
   </nav>
 
-  <!-- Messaging Interface -->
-  <div class="messaging-container">
-    <!-- Left Column: Contacts List -->
-    <div class="contacts-list">
-      <h3>Inbox</h3>
-      <div class="contact-item">Mild, Mannered, and Timid</div>
+<!-- Messaging Interface -->
+<div class="messaging-container">
+  <!-- Left Column: Contacts List -->
+  <div class="contacts-list">
+    <h3>Inbox</h3>
+    <div class="contact-item">Mild, Mannered, and Timid</div>
       <div class="contact-item">VitalBloom</div>
       <div class="contact-item">Crisp & Crave</div>
-      <div class="contact-item">Catalyst Capital</div>
+      <div class="contact-item">ThriveWell</div>
+  </div>
+
+  <!-- Right Column: Conversation Area -->
+  <div class="conversation-area">
+    <div class="conversation-header">
+      <!-- Initially showing default header; will update on click -->
+      Select a contact
     </div>
-
-    <!-- Right Column: Conversation Area -->
-    <div class="conversation-area">
-      <div class="conversation-header">
-        Mild, Mannered, and Timid
-      </div>
-      <div class="messages">
-
-      </div>
-      <div class="message-input-container">
-        <input type="text" class="message-input" placeholder="Type your message...">
-        <button class="send-button">Send</button>
-      </div>
+    <div class="messages">
+      <!-- Conversation messages will be loaded here -->
+    </div>
+    <div class="message-input-container">
+      <input type="text" class="message-input" placeholder="Type your message...">
+      <button class="send-button">Send</button>
     </div>
   </div>
+</div>
+
+<script>
+  // Attach click event listeners to each contact item
+  document.querySelectorAll('.contact-item').forEach(contact => {
+    contact.addEventListener('click', function() {
+      const contactName = this.textContent.trim();
+      // Update the conversation header with the contact's name
+      document.querySelector('.conversation-header').textContent = contactName;
+      const messagesContainer = document.querySelector('.messages');
+      // Clear previous conversation
+      messagesContainer.innerHTML = "";
+
+      // Load different conversation content based on the contact clicked
+      if (contactName === "VitalBloom") {
+        const msg1 = document.createElement('div');
+        msg1.className = 'message received';
+        msg1.textContent = "Hey VitalBloom, I came across VitalBloom and love what you're doing in the wellness space. Your approach to holistic health seems really innovative. I'd love to learn more about your journey and where you see the company headed. Let me know if you'd be open to a quick chat!";
+        messagesContainer.appendChild(msg1);
+
+        const msg2 = document.createElement('div');
+        msg2.className = 'message sent';
+        msg2.textContent = "Hey John Doe, thanks for reaching out! I’d be happy to connect and share more about VitalBloom. We’ve been growing steadily, focusing on healthy drinks, and expanding our reach in the younger demographic. Would love to hear more about your interest in the wellness space and how you approach investments. Let’s set up a time to chat—are you free for a quick call this week?";
+        messagesContainer.appendChild(msg2);
+      } else if (contactName === "Crisp & Crave") {
+        const msg1 = document.createElement('div');
+        msg1.className = 'message received';
+        msg1.textContent = "Hey Crisp & Crave! I came across Crisp & Crave and was really impressed by what you're building in the snack industry. The market for healthier, innovative chips is booming, and your brand seems to be hitting the sweet spot between taste and nutrition. I’d love to learn more about your journey, what sets Crisp & Crave apart, and where you see the brand headed. If you're open to it, I'd love to set up a quick call to chat! Let me know what works for you. Looking forward to connecting!";
+        messagesContainer.appendChild(msg1);
+      } else if (contactName === "ThriveWell") {
+        const msg1 = document.createElement('div');
+        msg1.className = 'message received';
+        msg1.textContent = "Hey ThriveWell, I came across ThriveWell and love what you're doing in the gardening and wellness space. With the growing interest in sustainable living and home gardening, your brand seems to be tapping into an exciting and rapidly expanding market. I’d love to hear more about your journey, how ThriveWell is differentiating itself, and what’s next for the company. If you’re open to it, I’d love to set up a quick call to learn more. Let me know what works for you!";
+
+        messagesContainer.appendChild(msg1);
+      } else {
+          // Default message for other contacts
+          const defaultMsg = document.createElement('div');
+          defaultMsg.className = 'message received';
+          defaultMsg.textContent = "No conversation available yet.";
+          messagesContainer.appendChild(defaultMsg);
+        }
+    });
+  });
+</script>
 </body>
 </html>

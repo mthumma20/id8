@@ -214,9 +214,9 @@
 
   .messaging-container {
     display: flex;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 60px); /* subtract navbar height */
   }
-
+  /* Contacts List Column */
   .contacts-list {
     width: 300px;
     background-color: #f0f2f5;
@@ -239,7 +239,7 @@
   .contact-item:hover {
     background-color: #e0e0e0;
   }
-
+  /* Conversation Area Column */
   .conversation-area {
     flex: 1;
     display: flex;
@@ -268,14 +268,15 @@
   }
   .message.sent {
     align-self: flex-end;
-    background-color: #007bff;
-    color: #fff;
-  }
-  .message.received {
-    align-self: flex-start;
     background-color: #e0e0e0;
     color: #000;
   }
+  .message.received {
+    align-self: flex-start;
+    background-color: #1B1B3A;
+    color: #fff;
+  }
+  /* Message Input Area */
   .message-input-container {
     padding: 10px;
     border-top: 1px solid #ccc;
