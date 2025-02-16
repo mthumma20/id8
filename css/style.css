@@ -56,8 +56,7 @@
   }
   
   .nav-links a:hover {
-    background-color: #fff;
-    color: #0B2B3A;
+    text-decoration: underline;
   }
   
   .gif-screen {
