@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Account Details</title>
+  <title>Second Page</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
@@ -13,32 +13,20 @@
   <nav class="navbar">
     <a href="index.html"><img src="img/Connect.png" alt="Connect" class="logo"></a>
     <div class="nav-links">
-      <a href="business.html">Discover</a>
+      <a href="discover.html">Discover</a>
       <a href="connect.html">Connect</a>
-      <a href="account.html"><img src="img/Profile.png" alt="Profile" class="logo"></a>
+      <a href="account-details.html"><img src="img/Profile.png" alt="Profile" class="logo"></a>
     </div>
   </nav>
 
-  <!-- Account Details Screen -->
-  <div class="account-details-screen">
-    <form class="account-form">
-      <h2>Account Details</h2>
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email" required>
-      <textarea rows="4" placeholder="Short Bio"></textarea>
-      <input type="url" placeholder="LinkedIn URL">
-      <!-- Headshot label above the file input -->
-      <div class="section-label">Headshot</div>
-      <input type="file" accept="image/*">
-      <button type="submit" onclick="submitDetails(event)">Save Profile</button>
-    </form>
+  <!-- Second Screen Content -->
+  <div class="second-screen">
+    <div class="form-container">
+      <input type="text" placeholder="Username">
+      <input type="text" placeholder="Password">
+      <!-- Direct redirect button -->
+      <button onclick="window.location.href='account-details.html'">Create an Account</button>
+    </div>
   </div>
-
-  <script>
-    function submitDetails(e) {
-      e.preventDefault();
-      window.location.href = "business.html";
-    }
-  </script>
 </body>
 </html>
