@@ -107,6 +107,12 @@
     gap: 10px;
   }
 
+  #website-title {
+    font-size: 40px;
+    color: white;
+    padding-bottom: 15px;
+  }
+
   .first-screen button {
     padding: 20px 40px;
     font-size: 20px;
@@ -418,6 +424,7 @@ main {
   padding: 20px;
   border-radius: 5px;
   margin: 10px;
+  margin-top: 0px;
   font-family: "Lexend";
   color: white;
 }
