@@ -528,3 +528,8 @@ a {
     /* You can also set a fixed width if desired */
   }
   
+  #welcome {
+    color: white;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }

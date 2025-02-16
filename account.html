@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Second Page</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script src="js/script.js"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -22,10 +23,10 @@
   <!-- Second Screen Content -->
   <div class="second-screen">
     <div class="form-container">
-      <input type="text" placeholder="Username">
-      <input type="text" placeholder="Password">
+      <input id="username" type="text" placeholder="Username">
+      <input id="pw" type="text" placeholder="Password">
       <!-- Direct redirect button -->
-      <button onclick="window.location.href='account-details.html'">Create an Account</button>
+      <button onclick="goAccDetail()">Create an Account</button>
     </div>
   </div>
 </body>
