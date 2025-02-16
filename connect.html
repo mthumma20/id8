@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="grad">
-  <!-- Navigation Bar -->
+  <!-- nav bar -->
   <nav class="navbar">
     <a href="index.html"><img src="img/Connect.png" alt="Connect" class="logo"></a>
     <div class="nav-links">
@@ -19,9 +19,7 @@
     </div>
   </nav>
 
-<!-- Messaging Interface -->
 <div class="messaging-container">
-  <!-- Left Column: Contacts List -->
   <div class="contacts-list">
     <h3>Inbox</h3>
     <div class="contact-item">Mild, Mannered, and Timid</div>
@@ -30,14 +28,11 @@
       <div class="contact-item">ThriveWell</div>
   </div>
 
-  <!-- Right Column: Conversation Area -->
   <div class="conversation-area">
     <div class="conversation-header">
-      <!-- Initially showing default header; will update on click -->
       Select a contact
     </div>
     <div class="messages">
-      <!-- Conversation messages will be loaded here -->
     </div>
     <div class="message-input-container">
       <input type="text" class="message-input" placeholder="Type your message...">
@@ -47,17 +42,13 @@
 </div>
 
 <script>
-  // Attach click event listeners to each contact item
   document.querySelectorAll('.contact-item').forEach(contact => {
     contact.addEventListener('click', function() {
       const contactName = this.textContent.trim();
-      // Update the conversation header with the contact's name
       document.querySelector('.conversation-header').textContent = contactName;
       const messagesContainer = document.querySelector('.messages');
-      // Clear previous conversation
       messagesContainer.innerHTML = "";
 
-      // Load different conversation content based on the contact clicked
       if (contactName === "VitalBloom") {
         const msg1 = document.createElement('div');
         msg1.className = 'message received';
@@ -80,7 +71,6 @@
 
         messagesContainer.appendChild(msg1);
       } else {
-          // Default message for other contacts
           const defaultMsg = document.createElement('div');
           defaultMsg.className = 'message received';
           defaultMsg.textContent = "No conversation available yet.";

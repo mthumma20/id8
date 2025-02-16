@@ -1,4 +1,4 @@
-/* Reset & Base Styles */
+/* Global Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,8 +11,8 @@
   height: 100%;
   min-height: 100vh;
   background-image: linear-gradient(to bottom, #31315D, #1d1d37, #07071c, #000000);
-  background-size: 100% 100vh; /* Adjusts the gradient to fit the full page */
-  background-attachment: fixed; /* Keeps it from restarting on each scroll */
+  background-size: 100% 100vh; 
+  background-attachment: fixed; 
 }
   
   body,
@@ -21,7 +21,6 @@
     font-family: "Lexend";
     height: 100%;
     margin: 0;
-    /* background-color:#1B1B3A;  */
   }
 
   .font {
@@ -44,7 +43,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    /* background-color: #383860; */
   }
   
   .navbar .logo {
@@ -91,7 +89,6 @@
     align-items: center;
     justify-content: center;
     height: calc(100vh - 100px);
-    /* background-color: #1B1B3A; */
     position: relative;
   }
   
@@ -259,9 +256,9 @@
 
   .messaging-container {
     display: flex;
-    height: calc(100vh - 60px); /* subtract navbar height */
+    height: calc(100vh - 60px); 
   }
-  /* Contacts List Column */
+  
   .contacts-list {
     width: 300px;
     background-color: #f0f2f5;
@@ -515,17 +512,16 @@ a {
 
 .photo-gallery {
     display: flex;
-    flex-wrap: nowrap;       /* Prevents images from wrapping to the next line */
-    gap: 10px;               /* Optional: adds spacing between images */
-    overflow-x: auto;        /* Optional: adds horizontal scrolling if images exceed container width */
-    padding: 10px;           /* Optional: adds some inner spacing */
-    background-color: #1B1B3A;  /* Optional: change background if desired */
+    flex-wrap: nowrap;       
+    gap: 10px;               
+    overflow-x: auto;        
+    padding: 10px;           
+    background-color: #1B1B3A;  
   }
   
   .photo-gallery img {
-    height: auto;            /* Maintains aspect ratio */
-    max-height: 150px;       /* Optional: set a max-height for uniformity */
-    /* You can also set a fixed width if desired */
+    height: auto;           
+    max-height: 150px;       
   }
   
   #welcome {
