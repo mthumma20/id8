@@ -502,3 +502,19 @@ a {
 .stacked-button:hover {
   background-color: #07071c;
 }
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: nowrap;       /* Prevents images from wrapping to the next line */
+    gap: 10px;               /* Optional: adds spacing between images */
+    overflow-x: auto;        /* Optional: adds horizontal scrolling if images exceed container width */
+    padding: 10px;           /* Optional: adds some inner spacing */
+    background-color: #1B1B3A;  /* Optional: change background if desired */
+  }
+  
+  .photo-gallery img {
+    height: auto;            /* Maintains aspect ratio */
+    max-height: 150px;       /* Optional: set a max-height for uniformity */
+    /* You can also set a fixed width if desired */
+  }
+  
