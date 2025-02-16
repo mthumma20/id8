@@ -95,14 +95,16 @@
     flex-direction: column;
     gap: 10px;
   }
-  
+
   .first-screen button {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 20px 40px;
+    font-size: 20px;
     cursor: pointer;
-    border: 2px solid #000;
-    background-color: #eee;
+    border: 2px solid #383860;
+    background-color: #383860;
+    color: #eee;
     transition: background-color 0.2s;
+    min-width: 200px;
   }
   
   .first-screen button:hover {
